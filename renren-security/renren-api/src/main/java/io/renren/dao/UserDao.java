@@ -17,6 +17,7 @@
 package io.renren.dao;
 
 import com.baomidou.mybatisplus.mapper.BaseMapper;
+
 import io.renren.entity.UserEntity;
 
 /**
@@ -26,6 +27,7 @@ import io.renren.entity.UserEntity;
  * @email sunlightcs@gmail.com
  * @date 2017-03-23 15:22:06
  */
-public interface UserDao extends BaseMapper<UserEntity> {
-
+public interface UserDao extends BaseMapper<UserEntity>
+{
+    
 }

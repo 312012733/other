@@ -22,5 +22,6 @@ package io.renren.common.validator.group;
  * @author Mark sunlightcs@gmail.com
  * @since 2.0.0 2017-03-28
  */
-public interface AliyunGroup {
+public interface AliyunGroup
+{
 }

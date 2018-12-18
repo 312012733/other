@@ -16,8 +16,8 @@
 
 package io.renren.modules.oss.dao;
 
-
 import com.baomidou.mybatisplus.mapper.BaseMapper;
+
 import io.renren.modules.oss.entity.SysOssEntity;
 
 /**
@@ -27,6 +27,7 @@ import io.renren.modules.oss.entity.SysOssEntity;
  * @email sunlightcs@gmail.com
  * @date 2017-03-25 12:13:26
  */
-public interface SysOssDao extends BaseMapper<SysOssEntity> {
-	
+public interface SysOssDao extends BaseMapper<SysOssEntity>
+{
+    
 }

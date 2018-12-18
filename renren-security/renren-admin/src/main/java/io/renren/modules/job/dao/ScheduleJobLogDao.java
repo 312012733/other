@@ -17,6 +17,7 @@
 package io.renren.modules.job.dao;
 
 import com.baomidou.mybatisplus.mapper.BaseMapper;
+
 import io.renren.modules.job.entity.ScheduleJobLogEntity;
 
 /**
@@ -25,6 +26,7 @@ import io.renren.modules.job.entity.ScheduleJobLogEntity;
  * @author Mark sunlightcs@gmail.com
  * @since 1.2.0 2016-11-28
  */
-public interface ScheduleJobLogDao extends BaseMapper<ScheduleJobLogEntity> {
-	
+public interface ScheduleJobLogDao extends BaseMapper<ScheduleJobLogEntity>
+{
+    
 }

@@ -16,11 +16,12 @@
 
 package io.renren.modules.oss.service;
 
+import java.util.Map;
+
 import com.baomidou.mybatisplus.service.IService;
+
 import io.renren.common.utils.PageUtils;
 import io.renren.modules.oss.entity.SysOssEntity;
-
-import java.util.Map;
 
 /**
  * 文件上传
@@ -29,7 +30,8 @@ import java.util.Map;
  * @email sunlightcs@gmail.com
  * @date 2017-03-25 12:13:26
  */
-public interface SysOssService extends IService<SysOssEntity> {
-
-	PageUtils queryPage(Map<String, Object> params);
+public interface SysOssService extends IService<SysOssEntity>
+{
+    
+    PageUtils queryPage(Map<String, Object> params);
 }

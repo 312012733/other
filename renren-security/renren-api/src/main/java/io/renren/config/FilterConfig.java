@@ -1,11 +1,12 @@
 package io.renren.config;
 
-import io.renren.common.xss.XssFilter;
+import javax.servlet.DispatcherType;
+
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import javax.servlet.DispatcherType;
+import io.renren.common.xss.XssFilter;
 
 /**
  * Filter配置
@@ -15,10 +16,12 @@ import javax.servlet.DispatcherType;
  * @date 2017-04-21 21:56
  */
 @Configuration
-public class FilterConfig {
-
+public class FilterConfig
+{
+    
     @Bean
-    public FilterRegistrationBean xssFilterRegistration() {
+    public FilterRegistrationBean xssFilterRegistration()
+    {
         FilterRegistrationBean registration = new FilterRegistrationBean();
         registration.setDispatcherTypes(DispatcherType.REQUEST);
         registration.setFilter(new XssFilter());

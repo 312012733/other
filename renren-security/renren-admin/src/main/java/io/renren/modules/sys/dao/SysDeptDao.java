@@ -16,10 +16,11 @@
 
 package io.renren.modules.sys.dao;
 
-import com.baomidou.mybatisplus.mapper.BaseMapper;
-import io.renren.modules.sys.entity.SysDeptEntity;
-
 import java.util.List;
+
+import com.baomidou.mybatisplus.mapper.BaseMapper;
+
+import io.renren.modules.sys.entity.SysDeptEntity;
 
 /**
  * 部门管理
@@ -28,12 +29,15 @@ import java.util.List;
  * @email sunlightcs@gmail.com
  * @date 2017-06-20 15:23:47
  */
-public interface SysDeptDao extends BaseMapper<SysDeptEntity> {
-
+public interface SysDeptDao extends BaseMapper<SysDeptEntity>
+{
+    
     /**
      * 查询子部门ID列表
-     * @param parentId  上级部门ID
+     * 
+     * @param parentId
+     *            上级部门ID
      */
     List<Long> queryDetpIdList(Long parentId);
-
+    
 }

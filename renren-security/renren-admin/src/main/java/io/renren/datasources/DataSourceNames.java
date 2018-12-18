@@ -7,8 +7,9 @@ package io.renren.datasources;
  * @email sunlightcs@gmail.com
  * @date 2017/8/18 23:46
  */
-public interface DataSourceNames {
+public interface DataSourceNames
+{
     String FIRST = "first";
     String SECOND = "second";
-
+    
 }

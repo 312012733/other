@@ -16,13 +16,13 @@
 
 package io.renren.common.config;
 
-import com.google.code.kaptcha.impl.DefaultKaptcha;
-import com.google.code.kaptcha.util.Config;
+import java.util.Properties;
+
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import java.util.Properties;
-
+import com.google.code.kaptcha.impl.DefaultKaptcha;
+import com.google.code.kaptcha.util.Config;
 
 /**
  * 生成验证码配置
@@ -31,10 +31,12 @@ import java.util.Properties;
  * @since 2.1.0 2017-04-20
  */
 @Configuration
-public class KaptchaConfig {
-
+public class KaptchaConfig
+{
+    
     @Bean
-    public DefaultKaptcha producer() {
+    public DefaultKaptcha producer()
+    {
         Properties properties = new Properties();
         properties.put("kaptcha.border", "no");
         properties.put("kaptcha.textproducer.font.color", "black");

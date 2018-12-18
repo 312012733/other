@@ -22,7 +22,8 @@ package io.renren.common.utils;
  * @author Mark sunlightcs@gmail.com
  * @since 1.2.0 2017-03-26
  */
-public class ConfigConstant {
+public class ConfigConstant
+{
     /**
      * 云存储配置KEY
      */

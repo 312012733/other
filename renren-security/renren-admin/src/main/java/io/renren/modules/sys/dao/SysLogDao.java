@@ -16,8 +16,8 @@
 
 package io.renren.modules.sys.dao;
 
-
 import com.baomidou.mybatisplus.mapper.BaseMapper;
+
 import io.renren.modules.sys.entity.SysLogEntity;
 
 /**
@@ -27,6 +27,7 @@ import io.renren.modules.sys.entity.SysLogEntity;
  * @email sunlightcs@gmail.com
  * @date 2017-03-08 10:40:56
  */
-public interface SysLogDao extends BaseMapper<SysLogEntity> {
-	
+public interface SysLogDao extends BaseMapper<SysLogEntity>
+{
+    
 }
