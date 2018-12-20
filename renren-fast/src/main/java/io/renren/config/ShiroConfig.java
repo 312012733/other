@@ -27,7 +27,7 @@ import io.renren.modules.sys.oauth2.OAuth2Realm;
  * @email sunlightcs@gmail.com
  * @date 2017-04-20 18:33
  */
-//@Configurations
+@Configuration
 public class ShiroConfig
 {
     
