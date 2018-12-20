@@ -11,6 +11,8 @@ import org.apache.shiro.authc.AuthenticationToken;
  */
 public class OAuth2Token implements AuthenticationToken
 {
+    private static final long serialVersionUID = 4095493097281368632L;
+    
     private String token;
     
     public OAuth2Token(String token)
@@ -18,12 +20,18 @@ public class OAuth2Token implements AuthenticationToken
         this.token = token;
     }
     
+    /**
+     * 返回在身份验证过程中提交的帐户标识（token）
+     */
     @Override
     public String getPrincipal()
     {
         return token;
     }
     
+    /**
+     * 返回用户在验证提交的帐户标识的身份验证过程中提交的凭据。（token）
+     */
     @Override
     public Object getCredentials()
     {
