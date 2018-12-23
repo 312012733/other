@@ -15,6 +15,5 @@ public interface PersonService {
     Person findOne1(Person person, String a, String[] b, List<Long> c);
 
     Person findOne2(Person person);
-
     Person findOne3(Person person);
 }

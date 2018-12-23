@@ -1,4 +1,5 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.xiaolyuh</groupId>
@@ -31,6 +32,19 @@
 	</properties>
 
 	<dependencies>
+	
+		<dependency>
+            <groupId>redis.clients</groupId>
+            <artifactId>jedis</artifactId>
+            <version>2.9.0</version>
+        </dependency>
+		<!-- https://mvnrepository.com/artifact/com.google.guava/guava -->
+		<dependency>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
+			<version>27.0-jre</version>
+		</dependency>
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter</artifactId>
@@ -94,21 +108,21 @@
 		<!-- Spring Boot 使用 caffeine作为 Spring 缓存 -->
 		<module>spring-boot-student-cache-caffeine</module>
 		<!-- 基于redis + caffeine实现的多级缓存 -->
-		<module>spring-boot-student-cache-redis-caffeine</module>	
+		<module>spring-boot-student-cache-redis-caffeine</module>
 		<!-- Spring Boot 使用Spring data mongo 操作mongodb数据库 -->
 		<module>spring-boot-student-data-mongo</module>
 		<!-- Spring Boot 使用Spring data redis 操作redis数据库 -->
 		<module>spring-boot-student-data-redis</module>
 		<!-- 基于redis实现的分布式锁 -->
-		<module>spring-boot-student-data-redis-distributed-lock</module>		
+		<module>spring-boot-student-data-redis-distributed-lock</module>
 		<!-- drools规则引擎入门 -->
-		<module>spring-boot-student-drools</module>	
+		<module>spring-boot-student-drools</module>
 		<!-- 基于redis实现的扣减库存 -->
 		<module>spring-boot-student-stock-redis</module>
 		<!-- Spring Boot RabbitMQ 实践 -->
 		<module>spring-boot-student-rabbitmq</module>
 		<!-- Spring Boot 监控 -->
-		<module>spring-boot-student-monitor</module>		
+		<module>spring-boot-student-monitor</module>
 		<!-- Spring Boot 参数校验 -->
 		<module>spring-boot-student-validated</module>
 		<!-- Spring Boot guava-retrying 重试机制 -->
@@ -119,6 +133,6 @@
 		<module>spring-boot-student-layering-cache</module>
 		<!-- Spring Boot hystrix -->
 		<module>spring-boot-student-hystrix</module>
-    </modules>
+	</modules>
 
 </project>

@@ -47,7 +47,7 @@ public class PersonServiceImpl implements PersonService {
     @Override
     @Cacheable(value = "people", key = "#person.id", sync = true)
     public Person findOne(Person person, String a, String[] b, List<Long> c) {
-        Person p = personRepository.findOne(person.getId());
+        Person p = personRepository.getOne(person.getId());
         logger.info("为id、key为:" + p.getId() + "数据做了缓存");
         return p;
     }
@@ -55,7 +55,7 @@ public class PersonServiceImpl implements PersonService {
     @Override
     @Cacheable(value = "people1")//3
     public Person findOne1() {
-        Person p = personRepository.findOne(2L);
+        Person p = personRepository.getOne(2L);
         logger.info("为id、key为:" + p.getId() + "数据做了缓存");
         return p;
     }
@@ -63,7 +63,7 @@ public class PersonServiceImpl implements PersonService {
     @Override
     @Cacheable(value = "people2")//3
     public Person findOne2(Person person) {
-        Person p = personRepository.findOne(person.getId());
+        Person p = personRepository.getOne(person.getId());
         logger.info("为id、key为:" + p.getId() + "数据做了缓存");
         return p;
     }

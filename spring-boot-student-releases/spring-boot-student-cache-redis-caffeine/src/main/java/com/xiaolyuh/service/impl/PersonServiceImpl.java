@@ -18,6 +18,8 @@ import java.util.List;
  */
 @Service
 public class PersonServiceImpl implements PersonService {
+
+
     private static final Logger logger = LoggerFactory.getLogger(PersonServiceImpl.class);
 
     @Autowired
@@ -47,7 +49,7 @@ public class PersonServiceImpl implements PersonService {
     @Override
     @Cacheable(value = "people")
     public Person findOne() {
-        Person p = personRepository.findOne(2L);
+        Person p = personRepository.getOne(2L);
         logger.info("为id、key为:" + p.getId() + "数据做了缓存");
         return p;
     }
@@ -55,7 +57,7 @@ public class PersonServiceImpl implements PersonService {
     @Override
     @Cacheable(value = "people1", key = "#person.id", sync = true)//3
     public Person findOne1(Person person, String a, String[] b, List<Long> c) {
-        Person p = personRepository.findOne(person.getId());
+        Person p = personRepository.getOne(person.getId());
         if (p != null) {
             logger.info("为id、key为:" + p.getId() + "数据做了缓存");
         }
@@ -65,7 +67,7 @@ public class PersonServiceImpl implements PersonService {
     @Override
     @Cacheable(value = "people2")//3
     public Person findOne2(Person person) {
-        Person p = personRepository.findOne(person.getId());
+        Person p = personRepository.getOne(person.getId());
         logger.info("为id、key为:" + p.getId() + "数据做了缓存");
         return p;
     }
@@ -73,8 +75,9 @@ public class PersonServiceImpl implements PersonService {
     @Override
     @Cacheable(value = "people3")//3
     public Person findOne3(Person person) {
-        Person p = personRepository.findOne(person.getId());
+        Person p = personRepository.getOne(person.getId());
         logger.info("为id、key为:" + p.getId() + "数据做了缓存");
         return p;
     }
+    
 }
